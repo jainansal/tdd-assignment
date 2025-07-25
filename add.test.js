@@ -20,3 +20,7 @@ test("addition of multiple numbers. 1,4,5 = 10", () => {
 test("addition of multiple numbers. 10,4,1,9,3,8 = 35", () => {
   expect(add("10,4,1,9,3,8")).toBe(35);
 });
+
+test("addition of new lines returns the sum of the numbers. '1\n2' should return 3", () => {
+  expect(add("1\n2")).toBe(3);
+});
