@@ -24,3 +24,11 @@ test("addition of multiple numbers. 10,4,1,9,3,8 = 35", () => {
 test("addition of new lines returns the sum of the numbers. '1\n2' should return 3", () => {
   expect(add("1\n2")).toBe(3);
 });
+
+test("numbers separated with a combination of new line and comma returns their sum. '1\n2,4,7\n1' should return 15", () => {
+  expect(add("1\n2,4,7\n1")).toBe(15);
+});
+
+test("numbers separated with a combination of multiple new lines and comma returns their sum. '1\n\n2,7\n1' should return 11", () => {
+  expect(add("1\n\n2,7\n1")).toBe(11);
+});
