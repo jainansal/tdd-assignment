@@ -12,3 +12,11 @@ test("single number returns number itself", () => {
 test("passing (3,7) returns 10", () => {
   expect(add("3,7")).toBe(10);
 });
+
+test("addition of multiple numbers. 1,4,5 = 10", () => {
+  expect(add("1,4,5")).toBe(10);
+});
+
+test("addition of multiple numbers. 10,4,1,9,3,8 = 35", () => {
+  expect(add("10,4,1,9,3,8")).toBe(35);
+});
