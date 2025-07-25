@@ -1,0 +1,23 @@
+{
+  "name": "tdd-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jainansal/tdd-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jainansal/tdd-assignment/issues"
+  },
+  "homepage": "https://github.com/jainansal/tdd-assignment#readme",
+  "description": "",
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
