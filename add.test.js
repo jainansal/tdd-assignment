@@ -36,3 +36,11 @@ test("numbers separated with a combination of multiple new lines and comma retur
 test("passing a delimiter in the given format should return the sum of numbers. '//;\n1;4;3' should return 8", () => {
   expect(add("//;\n1;4;3")).toBe(8);
 });
+
+test("passing a negative number throws an exception in the format 'negative numbers not allowed <list_of_numbers>'", () => {
+  expect(add("1,-1")).toThrowError("negative numbers not allowed");
+});
+
+test("passing a negative number throws an exception in the format 'negative numbers not allowed <list_of_numbers>' (2)", () => {
+  expect(add("//;\n1;45;-10")).toThrowError("negative numbers not allowed");
+});
