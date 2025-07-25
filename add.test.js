@@ -32,3 +32,7 @@ test("numbers separated with a combination of new line and comma returns their s
 test("numbers separated with a combination of multiple new lines and comma returns their sum. '1\n\n2,7\n1' should return 11", () => {
   expect(add("1\n\n2,7\n1")).toBe(11);
 });
+
+test("passing a delimiter in the given format should return the sum of numbers. '//;\n1;4;3' should return 8", () => {
+  expect(add("//;\n1;4;3")).toBe(8);
+});
