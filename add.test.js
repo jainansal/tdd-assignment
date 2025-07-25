@@ -38,9 +38,17 @@ test("passing a delimiter in the given format should return the sum of numbers. 
 });
 
 test("passing a negative number throws an exception in the format 'negative numbers not allowed <list_of_numbers>'", () => {
-  expect(add("1,-1")).toThrowError("negative numbers not allowed");
+  expect(() => add("1,-1")).toThrowError("negative numbers not allowed -1");
 });
 
 test("passing a negative number throws an exception in the format 'negative numbers not allowed <list_of_numbers>' (2)", () => {
-  expect(add("//;\n1;45;-10")).toThrowError("negative numbers not allowed");
+  expect(() => add("//;\n1;45;-10")).toThrowError(
+    "negative numbers not allowed -10"
+  );
+});
+
+test("passing a negative number throws an exception in the format 'negative numbers not allowed <list_of_numbers>' (2)", () => {
+  expect(() => add("//;\n1;45;-10;-2")).toThrowError(
+    "negative numbers not allowed -10,-2"
+  );
 });
